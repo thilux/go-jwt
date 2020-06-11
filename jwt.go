@@ -136,7 +136,7 @@ func verifySignature(signingInput string, signature []byte, algName string, secr
 	}
 
 	mac := hmac.New(alg, []byte(secret))
-	mac.Write([]byte(signingInput))
+	_, _ = mac.Write([]byte(signingInput))
 
 	expectedMac := mac.Sum(nil)
 
@@ -150,7 +150,7 @@ func verifySignature(signingInput string, signature []byte, algName string, secr
 func hmacSign(signingBytes []byte, alg func() hash.Hash, secret string) string {
 
 	mac := hmac.New(alg, []byte(secret))
-	mac.Write(signingBytes)
+	_, _ = mac.Write(signingBytes)
 
 	output := mac.Sum(nil)
 

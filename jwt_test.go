@@ -77,6 +77,11 @@ func Test_DecodeHS256Token_Success(t *testing.T) {
 
 	token, err := Encode(payload, secret, "HS256")
 
+	if err != nil {
+		t.Errorf("Unexpected error: %s", err.Error())
+		t.Fail()
+	}
+
 	var payload2 testAuthenticationBody
 
 	err = Decode(token, secret, &payload2)
@@ -110,6 +115,11 @@ func Test_DecodeHS512Token_Success(t *testing.T) {
 	payload := testAuthenticationBody{UserName: "test", Age: 33, CreationDate: time.Now()}
 
 	token, err := Encode(payload, secret, "HS512")
+
+	if err != nil {
+		t.Errorf("Unexpected error: %s", err.Error())
+		t.Fail()
+	}
 
 	var payload2 interface{}
 
