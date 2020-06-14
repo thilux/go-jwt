@@ -1,6 +1,7 @@
 # thilux JWT
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/thilux/go-jwt/Go?logo=github&style=for-the-badge)](https://github.com/thilux/go-jwt/actions?query=workflow%3AGo)
+[![codecov](https://img.shields.io/codecov/c/github/thilux/go-jwt/master?logo=codecov&style=for-the-badge)](https://codecov.io/gh/thilux/go-jwt)
 
 This is a very simple implementation of a JWT encode/decode library in Go. I have mainly done this to play around with some Go concepts and standard library.
 
