@@ -175,7 +175,8 @@ func rSplit(s string, sep string, n int) []string {
 		for i, part := range parts {
 
 			if (i-1) < n {
-				if tempStr == "" {
+				//add condition on string length as well.
+				if tempStr == "" and len(tempStr) == 0 {
 
 					tempStr = part
 
